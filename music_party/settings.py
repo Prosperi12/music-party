@@ -1,6 +1,8 @@
 from pathlib import Path
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 SECRET_KEY = 'django-insecure-replace-this-in-production-xyz123abc456'
 
@@ -50,12 +52,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'music_party.wsgi.application'
 
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default': dj_database_url.parse('postgresql://postgres.bvvygywmiokrmpujbrgz:MusicParty20252026@aws-1-us-east-1.pooler.supabase.com:6543/postgres')
     }
-}
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
