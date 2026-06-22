@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Party</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0a0a0f; color: #f0f0f5; font-family: 'Inter', sans-serif; min-height: 100vh; }
+        #app { min-height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="{% static 'frontend/main.js' %}"></script>
+</body>
+</html>
